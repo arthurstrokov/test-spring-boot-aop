@@ -13,9 +13,9 @@ This is the class where we will implement the logic that we want our custom anno
  */
 @Aspect
 @Component
-public class ExecutionTimeAspect {
+public class LogExecutionTimeAspect {
 
-    public static final Logger logger = LoggerFactory.getLogger(ExecutionTimeAspect.class);
+    public static final Logger logger = LoggerFactory.getLogger(LogExecutionTimeAspect.class);
 
     /*
     First, we have annotated our method with @Around.
