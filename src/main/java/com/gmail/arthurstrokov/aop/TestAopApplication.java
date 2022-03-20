@@ -17,10 +17,9 @@ public class TestAopApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext context) {
         return args -> {
-
             BeanService beanService = (BeanService) context.getBean("beanService");
-            beanService.doSomeJob();
             beanService.getBeans(context);
+            beanService.doSomeFakeJob();
         };
     }
 }

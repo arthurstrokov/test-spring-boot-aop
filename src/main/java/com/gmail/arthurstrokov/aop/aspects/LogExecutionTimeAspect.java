@@ -1,4 +1,4 @@
-package com.gmail.arthurstrokov.aop;
+package com.gmail.arthurstrokov.aop.aspects;
 
 
 import org.aspectj.lang.ProceedingJoinPoint;

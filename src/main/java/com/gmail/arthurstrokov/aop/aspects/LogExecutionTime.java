@@ -1,4 +1,4 @@
-package com.gmail.arthurstrokov.aop;
+package com.gmail.arthurstrokov.aop.aspects;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
