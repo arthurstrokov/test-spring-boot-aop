@@ -1,4 +1,4 @@
-package com.gmail.arthurstrokov.aop.proxy.entity;
+package com.gmail.arthurstrokov.aop.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-
     private Integer id;
-
     private String name;
 }

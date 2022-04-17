@@ -19,7 +19,7 @@ public class LogInspectingMethodAspect {
 
     public static final Logger logger = LoggerFactory.getLogger(LogInspectingMethodAspect.class);
 
-    @Around("@annotation(LogInspectingMethod)")
+    @Around("@annotation(com.gmail.arthurstrokov.aop.annotations.LogInspectingMethod)")
     public Object logInspectingMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         Class<?> cls = Class.forName(joinPoint.getSignature().getDeclaringTypeName());
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

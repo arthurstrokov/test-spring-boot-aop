@@ -1,7 +1,7 @@
 package com.gmail.arthurstrokov.aop.service;
 
-import com.gmail.arthurstrokov.aop.aspects.LogExecutionTime;
-import com.gmail.arthurstrokov.aop.aspects.LogInspectingMethod;
+import com.gmail.arthurstrokov.aop.annotations.LogExecutionTime;
+import com.gmail.arthurstrokov.aop.annotations.LogInspectingMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
