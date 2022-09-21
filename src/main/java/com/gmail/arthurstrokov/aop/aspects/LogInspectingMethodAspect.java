@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
@@ -22,12 +23,14 @@ public class LogInspectingMethodAspect {
     @Around("@annotation(com.gmail.arthurstrokov.aop.annotations.LogInspectingMethod)")
     public Object logInspectingMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         Class<?> cls = Class.forName(joinPoint.getSignature().getDeclaringTypeName());
+        Constructor<?>[] constructors = cls.getConstructors();
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         String modifier = Modifier.toString(method.getModifiers());
         Parameter[] parameters = method.getParameters();
 
         logger.info("Executable Class: {}", cls);
+        logger.info("Executable Class: {}", constructors[0].getName());
         logger.info("Executable Method: {}", joinPoint);
         logger.info("Executable Method Name: {}", method.getName());
         logger.info("Executable Method Modifier: {}", modifier);
