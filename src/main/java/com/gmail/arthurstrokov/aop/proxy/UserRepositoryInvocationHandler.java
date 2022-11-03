@@ -14,6 +14,7 @@ public class UserRepositoryInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        log.info("Hello from UserRepositoryInvocationHandler");
         log.info("Method {} was called with args {}", method.getName(), Arrays.toString(args));
         return method.invoke(repository, args);
     }
