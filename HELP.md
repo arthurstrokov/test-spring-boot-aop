@@ -1,3 +1,6 @@
+    // @Around("execution(* (@org.springframework.web.bind.annotation.RestController *).*(..))") - аннотация RestController
+    // @Around("execution(* (@org.springframework.web.bind.annotation.RestController by.belveb..*).*(..))") - и по пакету    
+
     //execution(static * com.xyz..*.*(..)) – выполнение кода любого статического метода в пакете com.xyz;
 
     //call(void MyInterface.*(..)) – вызов любого метода, возвращающего void, интерфейса MyInterface;
