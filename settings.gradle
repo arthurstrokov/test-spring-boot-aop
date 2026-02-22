@@ -1,10 +1,9 @@
 pluginManagement {
     repositories {
-        // resolve plugins from mavenCentral() mavenLocal() gradlePluginPortal()
         mavenLocal()
         mavenCentral()
         gradlePluginPortal()
     }
 }
 
-rootProject.name = 'test-spring-boot-aop-reflection'
+rootProject.name = 'test-spring-boot-aop'
