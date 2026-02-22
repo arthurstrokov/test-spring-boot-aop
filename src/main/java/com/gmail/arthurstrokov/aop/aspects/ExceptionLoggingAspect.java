@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExceptionLoggingAspect {
 
-    @AfterThrowing(pointcut = "@annotation(com.gmail.arthurstrokov.aop.annotations.LogException)", throwing = "ex")
+    @AfterThrowing(pointcut = "com.gmail.arthurstrokov.aop.aspects.PointcutDefinitions.logExceptionPointcut()", throwing = "ex")
     public void logException(JoinPoint joinPoint, Throwable ex) {
         log.error("Exception in method: {} with message: {}", 
                 joinPoint.getSignature().toShortString(), 

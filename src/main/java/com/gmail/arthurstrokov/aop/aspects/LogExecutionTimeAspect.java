@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 @Component
 public class LogExecutionTimeAspect {
 
-    @Around("@annotation(com.gmail.arthurstrokov.aop.annotations.LogExecutionTime)")
+    @Around("com.gmail.arthurstrokov.aop.aspects.PointcutDefinitions.logExecutionTimePointcut()")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         final StopWatch stopWatch = new StopWatch();
         stopWatch.start();

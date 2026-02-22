@@ -17,7 +17,7 @@ import java.lang.reflect.Parameter;
 @Component
 public class LogInspectingMethodAspect {
 
-    @Around("@annotation(com.gmail.arthurstrokov.aop.annotations.LogInspectingMethod)")
+    @Around("com.gmail.arthurstrokov.aop.aspects.PointcutDefinitions.logInspectingMethodPointcut()")
     public Object logInspectingMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();

@@ -13,6 +13,7 @@ The project is designed for educational purposes to show:
 - **Execution Time Logging**: Custom `@LogExecutionTime` annotation to measure and log method duration.
 - **Method Inspection**: Custom `@LogInspectingMethod` annotation to log detailed method signature information (modifiers, parameters, return types).
 - **Exception Logging**: Custom `@LogException` annotation to log exceptions with full stack trace.
+- **Pointcut Definitions (DRY)**: Centralized `PointcutDefinitions` class for reusable pointcut expressions across multiple aspects.
 - **Manual Proxy Demos**: Unit tests demonstrating manual creation of proxies without the full Spring container.
 
 ## Requirements
