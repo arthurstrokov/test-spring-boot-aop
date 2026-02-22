@@ -26,9 +26,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
-
-    // ByteBuddy for advanced proxy examples
-    implementation 'net.bytebuddy:byte-buddy:1.14.11'
 }
 
 tasks.named('test') {

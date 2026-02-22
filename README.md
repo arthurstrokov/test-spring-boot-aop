@@ -1,6 +1,6 @@
 # Spring Boot AOP Demonstration Project
 
-This repository provides a comprehensive guide and demonstration of **Aspect-Oriented Programming (AOP)** in a Spring Boot environment. It covers both high-level Spring AOP usage (with custom annotations and aspects) and low-level manual proxying techniques (JDK Dynamic Proxies and CGLIB/ByteBuddy).
+This repository provides a comprehensive guide and demonstration of **Aspect-Oriented Programming (AOP)** in a Spring Boot environment. It covers both high-level Spring AOP usage (with custom annotations and aspects) and low-level manual proxying techniques (JDK Dynamic Proxies and CGLIB).
 
 ## Overview
 
@@ -8,7 +8,6 @@ The project is designed for educational purposes to show:
 - How to implement custom AOP annotations.
 - How to create aspects to intercept method execution.
 - The differences between JDK Dynamic Proxies and CGLIB proxies.
-- Advanced proxying with ByteBuddy.
 
 ### Key Features
 - **Execution Time Logging**: Custom `@LogExecutionTime` annotation to measure and log method duration.
@@ -25,7 +24,7 @@ The project is designed for educational purposes to show:
 - **Framework**: Spring Boot 4.0.3
 - **AOP Support**: `spring-boot-starter-aspectj`
 - **Testing**: JUnit 5 (JUnit Jupiter)
-- **Utilities**: Lombok (for boilerplate reduction), ByteBuddy (for advanced proxying examples), SLF4J/Logback (for logging).
+- **Utilities**: Lombok (for boilerplate reduction), SLF4J/Logback (for logging).
 
 ## Setup and Run
 
