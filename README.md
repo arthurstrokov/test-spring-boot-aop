@@ -12,6 +12,7 @@ The project is designed for educational purposes to show:
 ### Key Features
 - **Execution Time Logging**: Custom `@LogExecutionTime` annotation to measure and log method duration.
 - **Method Inspection**: Custom `@LogInspectingMethod` annotation to log detailed method signature information (modifiers, parameters, return types).
+- **Exception Logging**: Custom `@LogException` annotation to log exceptions with full stack trace.
 - **Manual Proxy Demos**: Unit tests demonstrating manual creation of proxies without the full Spring container.
 
 ## Requirements
@@ -79,8 +80,8 @@ Testing uses `OutputCaptureExtension` to verify that aspects are correctly loggi
 │   │   ├── java
 │   │   │   └── com.gmail.arthurstrokov.aop
 │   │   │       ├── Application.java        # Entry point
-│   │   │       ├── annotations             # Custom AOP annotations (@LogExecutionTime, etc.)
-│   │   │       ├── aspects                 # Aspect implementations (LogExecutionTimeAspect, etc.)
+│   │   │       ├── annotations             # Custom AOP annotations (@LogExecutionTime, @LogException, etc.)
+│   │   │       ├── aspects                 # Aspect implementations (LogExecutionTimeAspect, ExceptionLoggingAspect, etc.)
 │   │   │       └── service                 # Business logic services using AOP
 │   │   └── resources
 │   │       └── application.properties     # Application configuration

@@ -36,12 +36,12 @@ This document provides project-specific details for development, testing, and co
 - **AOP Implementation**:
   - Custom annotations are located in `com.gmail.arthurstrokov.aop.annotations`.
   - Aspects are in `com.gmail.arthurstrokov.aop.aspects`.
-  - Current aspects use `@Around` advice for logging execution time and inspecting method signatures.
+  - Current aspects use `@Around` advice for logging execution time and inspecting method signatures, and `@AfterThrowing` for logging exceptions.
 - **Proxying**:
   - The project demonstrates both JDK Dynamic Proxies (for interfaces) and CGLIB/ByteBuddy (for classes).
   - Refer to `src/test/java/com/gmail/arthurstrokov/aop/proxy/` for educational examples of manual proxy creation.
 - **Logging**:
-  - SLF4J with Logback is the default. Aspects log information to the `INFO` level.
+  - SLF4J with Logback is the default. Aspects log information to the `INFO` level, and exceptions to the `ERROR` level.
 - **Code Style**:
   - Follow standard Java and Spring Boot conventions.
   - Use Lombok for logging (`@Slf4j`) and boilerplate (constructors, getters/setters) where appropriate.

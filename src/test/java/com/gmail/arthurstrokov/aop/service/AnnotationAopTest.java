@@ -7,8 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.system.CapturedOutput;
 import org.springframework.boot.test.system.OutputCaptureExtension;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ExtendWith(OutputCaptureExtension.class)
@@ -30,7 +29,7 @@ class AnnotationAopTest {
         String result = annotationTestService.executeWithLogInspectingMethod("test", 123);
         
         assertEquals("Executed with @LogInspectingMethod: test, 123", result);
-        assertOutputContains(output, "Executable Class:", "Executable Method:", "Executable Method Name: executeWithLogInspectingMethod");
+        assertOutputContains(output, "Executable Class:", "Executable Method Signature:", "Executable Method Name: executeWithLogInspectingMethod");
     }
 
     @Test
@@ -39,6 +38,18 @@ class AnnotationAopTest {
         
         assertEquals("Executed with both: data", result);
         assertOutputContains(output, "executed in", "Executable Method Name: executeWithBothAnnotations");
+    }
+
+    @Test
+    void testLogExceptionAnnotation(CapturedOutput output) {
+        assertThrows(RuntimeException.class, () -> annotationTestService.throwException());
+        assertOutputContains(output, "Exception in method:", "throwException", "Test exception for AOP");
+    }
+
+    @Test
+    void testLogExceptionWithTime(CapturedOutput output) {
+        assertThrows(RuntimeException.class, () -> annotationTestService.throwExceptionWithTime());
+        assertOutputContains(output, "Exception in method:", "throwExceptionWithTime", "executed in");
     }
 
     private void assertOutputContains(CapturedOutput output, String... expectedLogs) {
