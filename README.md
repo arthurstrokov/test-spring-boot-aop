@@ -17,13 +17,13 @@ The project is designed for educational purposes to show:
 
 ## Requirements
 
-- **Java**: 17 or later (recommended for Spring Boot 3.2 compatibility).
+- **Java**: 25 or later (required for Spring Boot 4.0 compatibility).
 - **Build Tool**: Gradle (wrapper included).
 
 ## Tech Stack
 
-- **Framework**: Spring Boot 3.2.0
-- **AOP Support**: `spring-boot-starter-aop`
+- **Framework**: Spring Boot 4.0.3
+- **AOP Support**: `spring-boot-starter-aspectj`
 - **Testing**: JUnit 5 (JUnit Jupiter)
 - **Utilities**: Lombok (for boilerplate reduction), ByteBuddy (for advanced proxying examples), SLF4J/Logback (for logging).
 
